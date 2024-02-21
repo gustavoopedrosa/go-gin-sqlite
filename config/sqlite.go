@@ -29,7 +29,10 @@ func InitializeSQLite() (*gorm.DB, error) {
 			return nil, err
 		}
 
+		logger.Info("database file created successfully")
 		file.Close()
+	} else {
+		logger.Info("utilizing an existing database file")
 	}
 
 	// Create DB and connect

@@ -9,6 +9,9 @@ const openingRoute = "opening"
 
 // initializeRoutes initialize the routes of the API.
 func initializeRoutes(router *gin.Engine) {
+	// Initialize handler
+	handler.InitializeHandler()
+
 	v1 := router.Group("/api/v1")
 	{
 		v1.GET(openingRoute, handler.ShowOpeningHandler)

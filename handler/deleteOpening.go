@@ -8,6 +8,18 @@ import (
 	"github.com/gustavoopedrosa/go-gin-sqlite/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Delete opening
+// @Description Delete a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param id query string true "Opening identification"
+// @Success 200 {Object} DeleteOpeningResponse
+// @Failure 400 {Object} ErrorResponse
+// @Failure 500 {Object} ErrorResponse
+// @Router /opening [delete]
 func DeleteOpeningHandler(ctx *gin.Context) {
 	id := ctx.Query("id")
 

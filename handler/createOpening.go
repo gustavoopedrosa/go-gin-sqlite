@@ -7,6 +7,18 @@ import (
 	"github.com/gustavoopedrosa/go-gin-sqlite/schemas"
 )
 
+// @BasePath /api/v1
+
+// @Summary Create opening
+// @Description Create a new job opening
+// @Tags Openings
+// @Accept json
+// @Produce json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {Object} CreateOpeningResponse
+// @Failure 400 {Object} ErrorResponse
+// @Failure 500 {Object} ErrorResponse
+// @Router /opening [post]
 func CreateOpeningHandler(ctx *gin.Context) {
 	request := CreateOpeningRequest{}
 
